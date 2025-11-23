@@ -1,7 +1,7 @@
 export default function SocialProof() {
   return (
     <section className="py-20 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-5xl font-normal text-black text-center mb-12">
           Trusted by Roamers around the world
         </h2>
