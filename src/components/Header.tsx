@@ -33,11 +33,17 @@ export default function Header() {
         </a>
 
         <nav className="hidden md:flex items-center">
-          <a href="#journey" className={`px-6 py-2 rounded-full transition-all text-sm font-medium ${
-            isDark ? 'bg-black text-white hover:bg-gray-900' : 'text-gray-700 hover:text-gray-900'
-          }`}>
+          <button
+            onClick={() => {
+              window.history.pushState({}, '', '/questionnaire?source=header');
+              window.dispatchEvent(new PopStateEvent('popstate'));
+            }}
+            className={`px-6 py-2 rounded-full transition-all text-sm font-medium ${
+              isDark ? 'bg-black text-white hover:bg-gray-900' : 'text-gray-700 hover:text-gray-900'
+            }`}
+          >
             Start your journey
-          </a>
+          </button>
         </nav>
 
         <button className="md:hidden">

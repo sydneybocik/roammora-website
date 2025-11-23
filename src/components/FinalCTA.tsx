@@ -12,7 +12,13 @@ export default function FinalCTA() {
             <p className="text-base text-gray-700 mb-8 leading-relaxed">
               Join the early Roamer waitlist to help us build a better way to belong and take your first step towards borderless living.
             </p>
-            <button className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all text-base font-medium inline-flex items-center gap-2 group">
+            <button
+              onClick={() => {
+                window.history.pushState({}, '', '/questionnaire?source=final_cta');
+                window.dispatchEvent(new PopStateEvent('popstate'));
+              }}
+              className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all text-base font-medium inline-flex items-center gap-2 group"
+            >
               Join the early Roamer waitlist
             </button>
           </div>

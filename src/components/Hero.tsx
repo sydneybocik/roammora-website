@@ -20,7 +20,13 @@ export default function Hero() {
         <p className="text-xl md:text-2xl font-light mb-12 max-w-3xl mx-auto leading-relaxed">
           We're building a world where moving your life abroad feels human, possible, and deeply yours.
         </p>
-        <button className="bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-all text-lg font-medium inline-flex items-center gap-2 group">
+        <button
+          onClick={() => {
+            window.history.pushState({}, '', '/questionnaire?source=hero');
+            window.dispatchEvent(new PopStateEvent('popstate'));
+          }}
+          className="bg-white text-black px-8 py-4 rounded-full hover:bg-gray-100 transition-all text-lg font-medium inline-flex items-center gap-2 group"
+        >
           Join the early Roamer waitlist
           <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
         </button>

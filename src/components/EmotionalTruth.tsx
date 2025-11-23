@@ -13,6 +13,10 @@ export default function EmotionalTruth() {
             Roammora exists because the world needs a better starting point.
           </p>
           <button
+            onClick={() => {
+              window.history.pushState({}, '', '/questionnaire?source=emotional_truth');
+              window.dispatchEvent(new PopStateEvent('popstate'));
+            }}
             className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all text-base font-medium inline-flex items-center gap-2"
           >
             Start your journey
