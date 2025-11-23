@@ -8,10 +8,15 @@ export default function EmotionalTruth() {
           <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
             The world is calling you somewhere else — you're not imagining it.
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
+          <p className="text-xl text-gray-600 leading-relaxed mb-8">
             Most people stay where they are because moving abroad feel impossible.<br />
             Roammora exists because the world needs a better starting point.
           </p>
+          <button
+            className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all text-base font-medium inline-flex items-center gap-2"
+          >
+            Start your journey
+          </button>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
