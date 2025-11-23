@@ -18,7 +18,7 @@ export default function FinalCTA() {
           </div>
           <div className="relative h-96 md:h-full">
             <img
-              src="/homepagewalkingdog.png"
+              src="/finalwebsiteimages/homepagewalkingdog.png"
               alt="Person with dog"
               className="w-full h-full object-cover"
             />
