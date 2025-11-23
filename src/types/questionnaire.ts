@@ -31,6 +31,7 @@ export interface RoamerSubmission {
   regions_interested?: string[];
   work_situation?: string;
   work_field?: string;
+  age_range?: string;
   income_range?: string;
   income_urgency?: string;
   moving_with?: string[];
@@ -73,6 +74,7 @@ export interface Section3Data {
   regions_interested: string[];
   work_situation: string;
   work_field: string;
+  age_range?: string;
   income_range: string;
   income_urgency: string;
   moving_with: string[];

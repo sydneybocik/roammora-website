@@ -64,6 +64,7 @@ export default function Section3({ data, onUpdate, onNext, onBack, submissionId 
           regions_interested: data.regions_interested,
           work_situation: data.work_situation,
           work_field: data.work_field,
+          age_range: data.age_range,
           income_range: data.income_range,
           income_urgency: data.income_urgency,
           moving_with: data.moving_with,
@@ -146,6 +147,21 @@ export default function Section3({ data, onUpdate, onNext, onBack, submissionId 
         value={data.work_field || ''}
         onChange={(value) => onUpdate({ ...data, work_field: value })}
         placeholder="e.g., Technology, Healthcare, Education"
+      />
+
+      <SelectInput
+        label="What is your age range?"
+        name="age_range"
+        value={data.age_range || ''}
+        onChange={(value) => onUpdate({ ...data, age_range: value })}
+        options={[
+          { value: '18_24', label: '18–24' },
+          { value: '25_34', label: '25–34' },
+          { value: '35_44', label: '35–44' },
+          { value: '45_54', label: '45–54' },
+          { value: '55_plus', label: '55+' },
+          { value: 'prefer_not_say', label: 'Prefer not to say' },
+        ]}
       />
 
       <SelectInput
