@@ -6,33 +6,35 @@ export default function SocialProof() {
           Trusted by Roamers around the world
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-          <div className="bg-gray-400 rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-            <h3 className="text-2xl font-light mb-4 text-gray-800">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <div className="bg-[#8b9a94] rounded-3xl p-12 flex items-center justify-center min-h-[280px]">
+            <h3 className="text-3xl font-light text-black leading-tight">
               7 global paths<br />unfolding to<br />Starter Stays
             </h3>
           </div>
 
-          <div className="bg-[#d5e5d8] rounded-2xl p-8 flex items-center justify-center">
-            <img src="/20.png" alt="Roammora" className="w-24 h-24 object-contain" />
+          <div className="bg-[#d5e5d8] rounded-3xl p-12 flex items-center justify-center min-h-[280px]">
+            <img src="/finalwebsiteimages/roammoraiconblack.png" alt="Roammora" className="w-40 h-40 object-contain" />
           </div>
 
-          <div className="bg-gray-100 rounded-2xl p-8 flex items-center justify-center">
-            <p className="text-lg leading-relaxed text-gray-800 italic">
+          <div className="bg-[#ede9e6] rounded-3xl p-12 flex items-center justify-center min-h-[280px]">
+            <p className="text-xl font-light text-black italic leading-relaxed">
               "I always thought moving abroad was for other people. Now it feels like it could be for me too."
             </p>
           </div>
+        </div>
 
-          <div className="bg-[#e5e5dd] rounded-2xl p-8 flex items-center justify-center">
-            <p className="text-lg leading-relaxed text-gray-800 italic">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="bg-[#ded9d3] rounded-3xl p-12 flex items-center justify-center min-h-[280px]">
+            <p className="text-xl font-light text-black italic leading-relaxed">
               "I didn't expect to feel understood... but this feels like someone finally gets what I'm trying to do."
             </p>
           </div>
 
-          <div className="bg-[#a8c4b5] rounded-2xl p-8 flex flex-col items-center justify-center text-center">
-            <div className="text-6xl font-light mb-4 text-gray-900">92%</div>
-            <p className="text-gray-900 leading-relaxed">
-              of early Roamers say they finally feel like it's possible
+          <div className="bg-[#a8c4b5] rounded-3xl p-12 flex flex-col items-center justify-center text-center min-h-[280px]">
+            <div className="text-7xl font-light mb-6 text-black">92%</div>
+            <p className="text-xl text-black leading-relaxed">
+              of early Roamers<br />say they finally feel<br />like it's possible
             </p>
           </div>
         </div>
