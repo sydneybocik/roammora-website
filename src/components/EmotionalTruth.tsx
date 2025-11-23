@@ -24,15 +24,17 @@ export default function EmotionalTruth() {
             badge="Dreaming"
             name="Alex – Gaining Clarity"
             description="Alex has always imagined living somewhere new, but never knew what that life would look like in reality. Roammora is helping him understand what matters most — pace of life, cost, culture, work style — so he can picture where he'd actually feel at home."
-            nextStep="Next step: Figure out what kind of life actually fits me."
+            nextStep="Figure out what kind of life actually fits me."
             image="/finalwebsiteimages/roamerheadshot1.png"
+            flagImage="/finalwebsiteimages/flagusa.png"
           />
           <RoamerCard
             badge="Planning"
             name="Sarah – Moving to France"
             description="Sarah has secured a job, finished her visa steps, and rented an apartment — now she's focused on settling in. Roammora helps her with introductory language courses, cultural basics, and day-to-day prep so she can arrive confident and ready."
-            nextStep="Next step: Finish language introduction and assimilation courses."
+            nextStep="Finish language introduction and assimilation courses."
             image="/finalwebsiteimages/roamerheadshot2.png"
+            flagImage="/finalwebsiteimages/flagcanada.png"
           />
         </div>
       </div>
