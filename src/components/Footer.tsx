@@ -1,3 +1,5 @@
+import { Instagram } from 'lucide-react';
+
 export default function Footer() {
   return (
     <footer className="bg-black text-white py-12 px-6">
@@ -7,9 +9,20 @@ export default function Footer() {
             <a href="/" className="flex items-center gap-3">
               <img src="/finalwebsiteimages/roammorawhitelogo.png" alt="Roammora" className="h-8" />
             </a>
-            <a href="mailto:hello@roammora.com" className="text-gray-400 hover:text-white transition-colors text-sm">
-              hello@roammora.com
-            </a>
+            <div className="flex items-center gap-4">
+              <a href="mailto:hello@roammora.com" className="text-gray-400 hover:text-white transition-colors text-sm">
+                hello@roammora.com
+              </a>
+              <a
+                href="https://www.instagram.com/roammora/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors"
+                aria-label="Follow Roammora on Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </a>
+            </div>
           </div>
 
           <div className="flex items-center gap-8">
