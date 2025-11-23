@@ -31,7 +31,7 @@ export default function FounderTeaser() {
               onClick={handleReadLetter}
               className="bg-black text-white px-8 py-4 rounded-full hover:bg-gray-800 transition-all text-base font-medium inline-flex items-center gap-2 group"
             >
-              Read Sydney's Letter
+              Read Sydney's letter
             </button>
           </div>
         </div>
