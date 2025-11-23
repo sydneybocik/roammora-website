@@ -19,7 +19,7 @@ export default function EmotionalTruth() {
           </button>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           <RoamerCard
             badge="Dreaming"
             name="Alex – Gaining Clarity"
