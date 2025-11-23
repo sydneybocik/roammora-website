@@ -12,7 +12,7 @@ export default function RoamerCard({ badge, name, description, nextStep, image, 
     <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow">
       <div className="relative h-96">
         <img src={image} alt={name} className="w-full h-full object-cover object-top" />
-        <div className="absolute top-4 left-4 bg-gray-900/60 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-medium">
+        <div className="absolute top-4 left-4 bg-gray-900/80 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-medium">
           {badge}
         </div>
         <div className="absolute bottom-4 left-4 right-4 bg-gray-900/60 backdrop-blur-md text-white p-4 rounded-lg flex items-start gap-3">
