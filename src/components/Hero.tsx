@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="absolute inset-0 bg-black/40" />
 
       <div className="relative z-10 text-center text-white px-6 max-w-5xl mx-auto">
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium mb-6 leading-tight">
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-light mb-6 leading-tight">
           Live where life<br />pulls you.
         </h1>
         <p className="text-xl md:text-2xl font-light mb-12 max-w-3xl mx-auto leading-relaxed">
