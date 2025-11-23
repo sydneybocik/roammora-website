@@ -16,6 +16,8 @@ export interface RoamerSubmission {
   last_name?: string;
   phone_number?: string;
   phone_country_code?: string;
+  heard_about_us?: string[];
+  heard_about_us_other_text?: string;
   opt_in_updates?: 'yes' | 'no';
 
   dream_pull?: string;
@@ -52,6 +54,8 @@ export interface Section1Data {
   email: string;
   phone_number: string;
   phone_country_code: string;
+  heard_about_us: string[];
+  heard_about_us_other_text: string;
   opt_in_updates: 'yes' | 'no';
 }
 

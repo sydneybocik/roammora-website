@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TextInput from '../form/TextInput';
 import PhoneInput from '../form/PhoneInput';
 import RadioGroup from '../form/RadioGroup';
+import MultiSelectInput from '../form/MultiSelectInput';
 import { Section1Data } from '../../types/questionnaire';
 import { supabase } from '../../lib/supabase';
 
@@ -17,6 +18,7 @@ export default function Section1({ data, onUpdate, onNext, onExistingSubmission,
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isCheckingEmail, setIsCheckingEmail] = useState(false);
   const [hasCheckedEmail, setHasCheckedEmail] = useState(false);
+  const [existingSubmissionId, setExistingSubmissionId] = useState<string | null>(null);
 
   const handleEmailBlur = async () => {
     if (!data.email || hasCheckedEmail || !data.email.includes('@')) return;
@@ -35,6 +37,7 @@ export default function Section1({ data, onUpdate, onNext, onExistingSubmission,
 
       if (submissions && submissions.length > 0) {
         const existingSubmission = submissions[0];
+        setExistingSubmissionId(existingSubmission.submission_id);
         onExistingSubmission(existingSubmission.submission_id, existingSubmission);
       }
       setHasCheckedEmail(true);
@@ -62,6 +65,12 @@ export default function Section1({ data, onUpdate, onNext, onExistingSubmission,
     if (!data.phone_number?.trim()) {
       newErrors.phone_number = 'Phone number is required';
     }
+    if (!data.heard_about_us || data.heard_about_us.length === 0) {
+      newErrors.heard_about_us = 'Please select at least one option';
+    }
+    if (data.heard_about_us?.includes('other') && !data.heard_about_us_other_text?.trim()) {
+      newErrors.heard_about_us_other_text = 'Please specify how you heard about us';
+    }
     if (!data.opt_in_updates) {
       newErrors.opt_in_updates = 'Please select an option';
     }
@@ -81,22 +90,34 @@ export default function Section1({ data, onUpdate, onNext, onExistingSubmission,
         last_name: data.last_name,
         phone_number: data.phone_number,
         phone_country_code: data.phone_country_code,
+        heard_about_us: data.heard_about_us || [],
+        heard_about_us_other_text: data.heard_about_us_other_text || null,
         opt_in_updates: data.opt_in_updates,
         current_section: '1',
         source: source,
         consent_timestamp: data.opt_in_updates === 'yes' ? new Date().toISOString() : null,
       };
 
-      const { data: result, error } = await supabase
-        .from('roamer_submissions')
-        .insert([submissionData])
-        .select()
-        .single();
+      if (existingSubmissionId) {
+        const { error } = await supabase
+          .from('roamer_submissions')
+          .update(submissionData)
+          .eq('submission_id', existingSubmissionId);
 
-      if (error) throw error;
+        if (error) throw error;
+        onNext(existingSubmissionId);
+      } else {
+        const { data: result, error } = await supabase
+          .from('roamer_submissions')
+          .insert([submissionData])
+          .select()
+          .single();
 
-      if (result && result.submission_id) {
-        onNext(result.submission_id);
+        if (error) throw error;
+
+        if (result && result.submission_id) {
+          onNext(result.submission_id);
+        }
       }
     } catch (error) {
       console.error('Error saving section 1:', error);
@@ -156,6 +177,41 @@ export default function Section1({ data, onUpdate, onNext, onExistingSubmission,
         required
         error={errors.phone_number}
       />
+
+      <MultiSelectInput
+        label="How did you hear about Roammora?"
+        name="heard_about_us"
+        value={data.heard_about_us || []}
+        onChange={(value) => onUpdate({ ...data, heard_about_us: value })}
+        options={[
+          { value: 'google', label: 'Google Search' },
+          { value: 'tiktok', label: 'TikTok' },
+          { value: 'instagram', label: 'Instagram' },
+          { value: 'youtube', label: 'YouTube' },
+          { value: 'reddit', label: 'Reddit' },
+          { value: 'x_twitter', label: 'X / Twitter' },
+          { value: 'facebook', label: 'Facebook' },
+          { value: 'linkedin', label: 'LinkedIn' },
+          { value: 'podcast', label: 'Podcast' },
+          { value: 'blog', label: 'Blog or article' },
+          { value: 'friend', label: 'A friend or fellow Roamer' },
+          { value: 'other', label: 'Other (please specify)' },
+        ]}
+        required
+        error={errors.heard_about_us}
+      />
+
+      {data.heard_about_us?.includes('other') && (
+        <TextInput
+          label="Please specify"
+          name="heard_about_us_other_text"
+          value={data.heard_about_us_other_text || ''}
+          onChange={(value) => onUpdate({ ...data, heard_about_us_other_text: value })}
+          required
+          error={errors.heard_about_us_other_text}
+          placeholder="Tell us how you found us..."
+        />
+      )}
 
       <RadioGroup
         label="Can we keep you in the loop as we grow?"
