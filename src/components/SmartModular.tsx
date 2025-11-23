@@ -5,19 +5,19 @@ const tabs = [
     id: 'dream',
     label: 'Dream',
     content: 'Roammora learns who you are — not just what documents you need — and helps you imagine the life waiting for you elsewhere.',
-    image: 'https://cdn.jsdelivr.net/gh/sydneybocik/roammora-website@main/public/finalwebsiteimages/homepagedream.png',
+    image: 'https://raw.githubusercontent.com/sydneybocik/roammora-website/main/public/finalwebsiteimages/homepagedream.png',
   },
   {
     id: 'plan',
     label: 'Plan',
     content: "We don't show you a list of steps. We show you the one that comes next — the one that makes everything feel possible.",
-    image: 'https://cdn.jsdelivr.net/gh/sydneybocik/roammora-website@main/public/finalwebsiteimages/homepageplan.png',
+    image: 'https://raw.githubusercontent.com/sydneybocik/roammora-website/main/public/finalwebsiteimages/homepageplan.png',
   },
   {
     id: 'arrive',
     label: 'Arrive',
     content: 'We help you land gently — into a home, a rhythm, and a community that makes your new life feel like coming home.',
-    image: 'https://cdn.jsdelivr.net/gh/sydneybocik/roammora-website@main/public/finalwebsiteimages/homepagearrive.png',
+    image: 'https://raw.githubusercontent.com/sydneybocik/roammora-website/main/public/finalwebsiteimages/homepagearrive.png',
   },
 ];
 
