@@ -45,7 +45,7 @@ export default function DataStream() {
 
   return (
     <section className="py-16 px-6 bg-[#2c3d34] overflow-hidden">
-      <div className="max-w-7xl mx-auto text-center mb-12">
+      <div className="max-w-6xl mx-auto text-center mb-12">
         <p className="text-sm text-gray-400 mb-6 tracking-wide uppercase">Your 24/7 AI Companion</p>
         <h2 className="text-4xl md:text-5xl font-light leading-tight text-white mb-8">
           Your beginning belongs somewhere.
