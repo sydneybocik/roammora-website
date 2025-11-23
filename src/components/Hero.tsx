@@ -1,40 +1,14 @@
-import { useState, useEffect } from 'react';
 import { ArrowRight } from 'lucide-react';
 
-const heroImages = [
-  'https://images.pexels.com/photos/6249520/pexels-photo-6249520.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  'https://images.pexels.com/photos/1024967/pexels-photo-1024967.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-  'https://images.pexels.com/photos/2467558/pexels-photo-2467558.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
-];
-
 export default function Hero() {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prev) => (prev + 1) % heroImages.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 grid grid-cols-3 gap-0">
-        {heroImages.map((img, idx) => (
-          <div
-            key={idx}
-            className="relative w-full h-screen overflow-hidden"
-          >
-            <img
-              src={img}
-              alt=""
-              className="w-full h-full object-cover transition-opacity duration-1000"
-              style={{
-                opacity: currentImageIndex === idx ? 1 : 0.7,
-              }}
-            />
-          </div>
-        ))}
+      <div className="absolute inset-0">
+        <img
+          src="/finalwebsiteimages/herotwopeopleatairport.png"
+          alt=""
+          className="w-full h-full object-cover"
+        />
       </div>
 
       <div className="absolute inset-0 bg-black/40" />
