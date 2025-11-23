@@ -25,7 +25,7 @@ export default function FounderLetter() {
         </h1>
 
         <img
-          src="/founderheadshotletterpage.jpeg"
+          src="/finalwebsiteimages/sydneybocikheadshoteyesopen.jpeg"
           alt="Sydney Bocik"
           className="w-full max-w-3xl h-auto object-cover my-16"
         />

@@ -11,7 +11,7 @@ export default function FounderTeaser() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl bg-gray-600">
             <img
-              src="/founderheadshot.jpeg"
+              src="/finalwebsiteimages/sydneybocikheadshoteyesclosed.jpeg"
               alt="Founder"
               className="w-full h-full object-cover"
             />
