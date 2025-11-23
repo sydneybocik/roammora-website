@@ -19,7 +19,12 @@ export default function RoamerCard({ badge, name, description, nextStep, image }
         </div>
       </div>
       <div className="p-8">
-        <h3 className="text-2xl font-semibold mb-4">{name}</h3>
+        <h3 className="text-2xl font-semibold mb-4">
+          {name.split('–')[0].trim()}
+          {name.includes('–') && (
+            <span className="text-gray-400"> – {name.split('–')[1].trim()}</span>
+          )}
+        </h3>
         <p className="text-gray-600 leading-relaxed">{description}</p>
       </div>
     </div>
