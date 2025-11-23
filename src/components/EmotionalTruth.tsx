@@ -1,0 +1,36 @@
+import RoamerCard from './RoamerCard';
+
+export default function EmotionalTruth() {
+  return (
+    <section className="py-24 px-6 bg-white">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16 max-w-4xl mx-auto">
+          <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
+            The world is calling you somewhere else — you're not imagining it.
+          </h2>
+          <p className="text-xl text-gray-600 leading-relaxed">
+            Most people stay where they are because moving abroad feel impossible.<br />
+            Roammora exists because the world needs a better starting point.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+          <RoamerCard
+            badge="Dreaming"
+            name="Alex – Gaining Clarity"
+            description="Alex has always imagined living somewhere new, but never knew what that life would look like in reality. Roammora is helping him understand what matters most — pace of life, cost, culture, work style — so he can picture where he'd actually feel at home."
+            nextStep="Next step: Figure out what kind of life actually fits me."
+            image="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=800"
+          />
+          <RoamerCard
+            badge="Planning"
+            name="Sarah – Moving to France"
+            description="Sarah has secured a job, finished her visa steps, and rented an apartment — now she's focused on settling in. Roammora helps her with introductory language courses, cultural basics, and day-to-day prep so she can arrive confident and ready."
+            nextStep="Next step: Finish language introduction and assimilation courses."
+            image="https://images.pexels.com/photos/3756679/pexels-photo-3756679.jpeg?auto=compress&cs=tinysrgb&w=800"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
