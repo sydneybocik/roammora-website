@@ -14,7 +14,7 @@ export default function SocialProof() {
           </div>
 
           <div className="bg-[#D8E5DC] rounded-xl p-10 flex items-center justify-center min-h-[300px]">
-            <img src="/finalwebsiteimages/roammoraiconblack.png" alt="Roammora" className="w-32 h-32 object-contain" />
+            <img src="/finalwebsiteimages/roammoraiconblack.png" alt="Roammora" className="w-40 h-40 object-contain" />
           </div>
 
           <div className="bg-[#F5F2EF] rounded-xl p-10 flex items-start justify-start min-h-[300px]">
