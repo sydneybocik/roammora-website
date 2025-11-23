@@ -28,7 +28,7 @@ export default function Header() {
           <img
             src={isDark ? "/finalwebsiteimages/roammorawhitelogo.png" : "/finalwebsiteimages/roammorablacklogo.png"}
             alt="Roammora"
-            className="h-8 transition-opacity duration-300"
+            className="h-12 transition-opacity duration-300"
           />
         </a>
 
