@@ -44,7 +44,7 @@ export default function DataStream() {
   }, []);
 
   return (
-    <section className="py-16 px-6 bg-[#2c3d34] overflow-hidden">
+    <section className="py-16 px-6 bg-[#16281d] overflow-hidden">
       <div className="max-w-6xl mx-auto text-center mb-12">
         <p className="text-sm text-gray-400 mb-6 tracking-wide uppercase">Your 24/7 AI Companion</p>
         <h2 className="text-4xl md:text-5xl font-light leading-tight text-white mb-8">
@@ -60,7 +60,7 @@ export default function DataStream() {
           {[...dataWords, ...dataWords].map((word, idx) => (
             <span
               key={idx}
-              className="inline-block bg-[#3d5045] px-6 py-3 rounded-full text-gray-200 font-light text-sm border border-gray-600"
+              className="inline-block bg-[#1f3426] px-6 py-3 rounded-full text-gray-200 font-light text-sm border border-gray-600"
             >
               {word}
             </span>

@@ -27,7 +27,7 @@ export default function SmartModular() {
   const activeContent = tabs.find((tab) => tab.id === activeTab);
 
   return (
-    <section className="pb-24 px-6 bg-[#2c3d34]">
+    <section className="pb-24 px-6 bg-[#16281d]">
       <div className="max-w-6xl mx-auto">
         <div className="bg-white rounded-3xl overflow-hidden shadow-2xl">
           <div className="p-8 md:p-12">
