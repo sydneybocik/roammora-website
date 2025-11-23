@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           <div className="flex items-center gap-3">
-            <img src="/roammorawhitelogo.png" alt="Roammora" className="h-8" />
+            <img src="/finalwebsiteimages/roammorawhitelogo.png" alt="Roammora" className="h-8" />
           </div>
 
           <div className="flex items-center gap-8">
