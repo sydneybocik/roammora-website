@@ -51,7 +51,7 @@ export default function DataStream() {
           Your beginning belongs somewhere.
         </h2>
         <p className="text-base text-gray-300 leading-relaxed max-w-3xl mx-auto">
-          Your future shouldn't be shaped by guesswork. Roammora helps you see your next chapter clearly — one step, one choice, one possibility at a time.
+          Your future shouldn't be shaped by guesswork. When you move abroad, Roammora helps you see your next chapter clearly — one step, one choice, one possibility at a time.
         </p>
       </div>
 

@@ -5,7 +5,8 @@
     <link rel="icon" type="image/png" href="/finalwebsiteimages/roammoraiconblack.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roammora – Live where life pulls you</title>
-    <meta name="description" content="Roammora helps you turn the idea of moving abroad into a real, livable path — from dreaming and planning to finally arriving somewhere that feels like home.">
+    <meta name="description" content="Roammora helps you move abroad with clarity and confidence. A human-centered platform built to support your international journey — from dreaming to planning to arriving.">
+    <link rel="canonical" href="https://roammora.com/" />
 
     <!-- Open Graph (iMessage, Facebook, Slack, etc.) -->
     <meta property="og:type" content="website">
@@ -20,6 +21,26 @@
     <meta name="twitter:description" content="Turn the idea of moving abroad into a real, livable path — from dream to arrival.">
     <meta name="twitter:image" content="https://roammora.com/finalwebsiteimages/herotwopeopleatairport.png">
 
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Roammora",
+      "url": "https://roammora.com",
+      "description": "Roammora helps you move abroad with clarity and confidence.",
+      "logo": "https://roammora.com/roammorawhitelogo.png"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Roammora",
+      "url": "https://roammora.com"
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -27,5 +48,19 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      // GA4 Analytics - only load if environment variable is set
+      if (window.VITE_GA4_MEASUREMENT_ID) {
+        const script = document.createElement('script');
+        script.async = true;
+        script.src = `https://www.googletagmanager.com/gtag/js?id=${window.VITE_GA4_MEASUREMENT_ID}`;
+        document.head.appendChild(script);
+
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', window.VITE_GA4_MEASUREMENT_ID);
+      }
+    </script>
   </body>
 </html>

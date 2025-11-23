@@ -12,8 +12,9 @@ export default function FounderTeaser() {
           <div className="relative h-[500px] rounded-2xl overflow-hidden shadow-xl bg-gray-600">
             <img
               src="/finalwebsiteimages/sydneybocikheadshoteyesclosed.jpeg"
-              alt="Founder"
+              alt="Sydney Bocik, Roammora founder"
               className="w-full h-full object-cover"
+              loading="lazy"
             />
           </div>
 

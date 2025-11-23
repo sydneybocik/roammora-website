@@ -3,6 +3,7 @@ import Hero from '../components/Hero';
 import EmotionalTruth from '../components/EmotionalTruth';
 import SmartModular from '../components/SmartModular';
 import DataStream from '../components/DataStream';
+import SEOContent from '../components/SEOContent';
 import FounderTeaser from '../components/FounderTeaser';
 import SocialProof from '../components/SocialProof';
 import FinalCTA from '../components/FinalCTA';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Hero />
       <EmotionalTruth />
       <DataStream />
+      <SEOContent />
       <SmartModular />
       <FounderTeaser />
       <SocialProof />

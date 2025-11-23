@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0">
         <img
           src="/finalwebsiteimages/herotwopeopleatairport.png"
-          alt=""
+          alt="Two people at airport departure terminal looking out window"
           className="w-full h-full object-cover"
         />
       </div>

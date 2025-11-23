@@ -19,6 +19,22 @@ function App() {
     return () => window.removeEventListener('popstate', handleLocationChange);
   }, []);
 
+  useEffect(() => {
+    if (currentPath === '/privacy-promise') {
+      document.title = 'Roammora – Privacy Promise';
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 'How Roammora protects your privacy, your story, and your data. A simple and transparent explanation of what we collect and why.');
+      }
+    } else if (currentPath === '/') {
+      document.title = 'Roammora – Live where life pulls you';
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', 'Roammora helps you move abroad with clarity and confidence. A human-centered platform built to support your international journey — from dreaming to planning to arriving.');
+      }
+    }
+  }, [currentPath]);
+
   const handleQuestionnaireComplete = () => {
     window.history.pushState({}, '', '/questionnaire/success');
     setCurrentPath('/questionnaire/success');

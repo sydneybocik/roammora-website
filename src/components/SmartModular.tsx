@@ -41,9 +41,9 @@ export default function SmartModular() {
             <div className="relative h-96 md:h-[500px] rounded-2xl overflow-hidden shadow-lg mb-12 bg-gray-100">
               <img
                 src={activeContent?.image}
-                alt={activeContent?.label}
+                alt={`${activeContent?.label} phase illustration`}
                 className="w-full h-full object-cover object-[center_20%] transition-opacity duration-500"
-                loading="eager"
+                loading="lazy"
               />
             </div>
 
