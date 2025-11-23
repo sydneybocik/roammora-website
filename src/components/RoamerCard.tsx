@@ -15,9 +15,9 @@ export default function RoamerCard({ badge, name, description, nextStep, image, 
         <div className="absolute top-4 left-4 bg-gray-900/80 backdrop-blur-md text-white px-4 py-2 rounded-full text-sm font-medium">
           {badge}
         </div>
-        <div className="absolute bottom-4 left-4 right-4 bg-gray-900/60 backdrop-blur-md text-white p-4 rounded-lg flex items-start gap-3">
+        <div className="absolute bottom-4 left-4 right-4 bg-gray-900/60 backdrop-blur-md text-white p-4 rounded-lg flex items-stretch gap-3">
           {flagImage && (
-            <img src={flagImage} alt="Flag" className="w-10 h-7 object-contain flex-shrink-0" />
+            <img src={flagImage} alt="Flag" className="w-10 object-contain flex-shrink-0 self-stretch" />
           )}
           <div className="flex-1 min-w-0">
             <p className="text-xs text-gray-300 mb-1">Next step</p>
