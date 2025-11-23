@@ -32,7 +32,7 @@ export default function EmotionalTruth() {
             badge="Planning"
             name="Sarah – Moving to France"
             description="Sarah has secured a job, finished her visa steps, and rented an apartment — now she's focused on settling in. Roammora helps her with introductory language courses, cultural basics, and day-to-day prep so she can arrive confident and ready."
-            nextStep="Finish language introduction and assimilation courses."
+            nextStep="Finish assimilation courses."
             image="/finalwebsiteimages/roamerheadshot2.png"
             flagImage="/finalwebsiteimages/flagcanada.png"
           />
