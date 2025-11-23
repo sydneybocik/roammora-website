@@ -31,9 +31,9 @@ export default function SocialProof() {
             </p>
           </div>
 
-          <div className="bg-[#B5CFC1] rounded-xl p-10 flex flex-col items-center justify-center text-center min-h-[300px]">
+          <div className="bg-[#B5CFC1] rounded-xl p-10 flex flex-col items-start justify-end min-h-[300px]">
             <div className="text-7xl font-normal mb-4 text-black">92%</div>
-            <p className="text-lg text-black font-normal leading-relaxed">
+            <p className="text-lg text-black font-normal leading-relaxed text-left">
               of early Roamers say<br />they finally feel like it's<br />possible
             </p>
           </div>
